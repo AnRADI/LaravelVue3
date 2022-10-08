@@ -1,36 +1,30 @@
 
 <template>
 
-
-    <MultiSelect v-model="selectedCars" :options="cars" optionLabel="brand" placeholder="Select Brands" />
-
+    <v-select
+        v-model="select"
+        :items="items"
+        variant="outlined"
+        label="Select"
+    ></v-select>
+    <div>{{select}}</div>
 </template>
 
 
 <script>
 
-    import MultiSelect from 'primevue/multiselect';
+    import {VSelect} from 'vuetify/components/VSelect';
 
     export default {
 
         components: {
-            MultiSelect
+            VSelect
         },
 
         data() {
             return {
-                selectedCars: null,
-                cars: [
-                    {brand: 'Audi', value: 'Audi'},
-                    {brand: 'BMW', value: 'BMW'},
-                    {brand: 'Fiat', value: 'Fiat'},
-                    {brand: 'Honda', value: 'Honda'},
-                    {brand: 'Jaguar', value: 'Jaguar'},
-                    {brand: 'Mercedes', value: 'Mercedes'},
-                    {brand: 'Renault', value: 'Renault'},
-                    {brand: 'Volkswagen', value: 'Volkswagen'},
-                    {brand: 'Volvo', value: 'Volvo'}
-                ]
+                select: undefined,
+                items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
             }
         }
     }
@@ -38,7 +32,5 @@
 </script>
 
 <style lang="scss">
-    @import '~primevue/resources/themes/saga-blue/theme.css';
-    @import '~primevue/resources/primevue.min.css';
-    @import '~primeicons/primeicons.css';
+
 </style>

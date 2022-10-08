@@ -1,7 +1,11 @@
 
 import { createApp } from 'vue';
 
-import PrimeVue from 'primevue/config';
+
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify';
+
+const vuetify = createVuetify();
 
 
 // ------- Vue --------
@@ -16,5 +20,5 @@ createApp({
         Welcome
     }
 })
-    .use(PrimeVue)
+    .use(vuetify)
     .mount(el);
