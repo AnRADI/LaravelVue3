@@ -16,6 +16,7 @@
             ShopLayout
         },
 
+
         computed: {
 
             layout() {

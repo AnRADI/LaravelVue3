@@ -15,8 +15,13 @@ let production = mix.inProduction();
 
 mix.setPublicPath('public/');
 
-mix.js('resources/js/app.js', 'public/js').vue()
 
+if(!production) {
+    mix.copy('resources/images', 'public/images')
+}
+
+
+mix.js('resources/js/app.js', 'public/js').vue()
     .webpackConfig(require('./webpack.config'))
     .sourceMaps(!production, 'source-map')
     .disableNotifications()

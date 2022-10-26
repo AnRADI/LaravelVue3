@@ -1,10 +1,5 @@
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Welcome from "./Pages/Shop/Welcome";
-import Product from "./Pages/Shop/Product";
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router';
 
 
 const routes = [
@@ -15,7 +10,7 @@ const routes = [
     {
         path: '/welcome',
         name: 'welcome',
-        component: Welcome,
+        component: () => import('@/Pages/Shop/Welcome'),
         meta: {
             layout: 'shop-layout'
         }
@@ -23,7 +18,7 @@ const routes = [
     {
         path: '/product',
         name: 'product',
-        component: Product,
+        component: () => import('@/Pages/Shop/Product'),
         meta: {
             layout: 'shop-layout'
         }
@@ -32,10 +27,10 @@ const routes = [
 
 
 
-const router = new VueRouter({
+const router = createRouter({
 
-    mode: 'history',
-    base: process.env.BASE_URL,
+    history: createWebHistory(),
+
     routes,
 });
 

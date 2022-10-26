@@ -14,6 +14,7 @@ module.exports = {
             '@': path.resolve('resources/js'),
             '~': path.resolve('node_modules'),
             'public': path.resolve('public'),
+            'resources': path.resolve('resources'),
             'resources/lang': path.resolve('resources/lang'),
         },
     },

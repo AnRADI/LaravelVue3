@@ -1,60 +1,30 @@
 
-import Vue from 'vue';
+import { createApp } from 'vue';
 
 import router from './router';
 
-
-// ------- Vue Composition(vue 2) --------
-
-import VueCompositionAPI from '@vue/composition-api'
-Vue.use(VueCompositionAPI)
+import 'resources/scss/includes/flags.scss';
 
 
-// ------- Vuetify --------
+// ------- Prime Vue --------
 
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
+import PrimeVue from 'primevue/config';
 
-Vue.use(Vuetify);
-
-const vuetify = new Vuetify({
-    theme: {
-        themes: {
-            light: {
-                primary: '#9155FD',
-                accent: '#0d6efd',
-                secondary: '#8A8D93',
-                success: '#56CA00',
-                info: '#16B1FF',
-                warning: '#FFB400',
-                error: '#FF4C51',
-            },
-            dark: {
-                primary: '#9155FD',
-                accent: '#0d6efd',
-                secondary: '#8A8D93',
-                success: '#56CA00',
-                info: '#16B1FF',
-                warning: '#FFB400',
-                error: '#FF4C51',
-            },
-        },
-    },
-    icons: {
-        iconfont: 'mdiSvg',
-    },
-});
+import 'primevue/resources/themes/saga-blue/theme.css';
+import 'primevue/resources/primevue.min.css';
+import 'primeicons/primeicons.css';
 
 
 // ------- Vue --------
 
 import App from "./App.vue";
 
-Vue.config.productionTip = false
-Vue.config.devtools = false
+const el = document.getElementById('app');
 
-new Vue({
-    router,
-    vuetify,
-    render: h => h(App),
-}).$mount('#app')
+const app = createApp(App);
+
+app.use(PrimeVue);
+app.use(router);
+
+
+app.mount(el);

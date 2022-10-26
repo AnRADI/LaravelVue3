@@ -1,5 +1,7 @@
 <template>
-    <div>product</div>
+    <div class="product">
+        <div class="kk">fdfsd</div>
+    </div>
 </template>
 
 
@@ -11,6 +13,13 @@
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+
+    .product {
+
+        .kk {
+            color: red;
+        }
+    }
 
 </style>
