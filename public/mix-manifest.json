@@ -1,6 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/themes/red.css": "/css/themes/red.css",
+    "/css/themes/azure.css": "/css/themes/azure.css",
+    "/css/app.css": "/css/app.css",
     "/images/Shop/flag-sprite.png": "/images/Shop/flag-sprite.png",
-    "/images/vendor/primevue/resources/color.png": "/images/vendor/primevue/resources/color.png",
-    "/images/vendor/primevue/resources/hue.png": "/images/vendor/primevue/resources/hue.png"
+    "/images/Shop/purple.svg": "/images/Shop/purple.svg",
+    "/images/Shop/themes/purple.svg": "/images/Shop/themes/purple.svg",
+    "/images/Shop/themes/red.svg": "/images/Shop/themes/red.svg",
+    "/images/Shop/themes/lazure.svg": "/images/Shop/themes/lazure.svg",
+    "/images/Shop/themes/azure.svg": "/images/Shop/themes/azure.svg"
 }

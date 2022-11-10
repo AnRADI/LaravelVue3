@@ -8,6 +8,12 @@
         <title> Laravel-Vue - @yield('title') </title>
 
 
+        <!-- Styles -->
+
+        <link disabled id="theme" rel="stylesheet" href="{{ mix('css/themes/azure.css') }}">
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+
         <!-- Scripts -->
 
         <script src="{{ mix('js/app.js') }}" defer></script>

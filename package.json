@@ -29,6 +29,8 @@
         "webpack-open-browser-plugin": "^1.0.7"
     },
     "dependencies": {
+        "glob": "^7.2.0",
+        "primeicons": "^6.0.1",
         "primevue": "^3.18.0",
         "vue": "^3.2.36",
         "vue-router": "^4.1.5"

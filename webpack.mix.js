@@ -1,5 +1,6 @@
 
 const mix = require('laravel-mix');
+const glob = require('glob');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,6 +19,20 @@ mix.setPublicPath('public/');
 
 if(!production) {
     mix.copy('resources/images', 'public/images')
+}
+
+
+// ------------- Scss glob --------------
+
+let scssFiles = glob.sync('resources/scss/**/*.scss', {"ignore": 'resources/scss/includes/**'});
+
+length = scssFiles.length;
+
+for(let i = 0; i < length; i++) {
+
+    mix.sass(scssFiles[i], scssFiles[i].replace('resources/scss', 'public/css').replace('.scss', '.css')).options({
+        processCssUrls: false
+    });
 }
 
 

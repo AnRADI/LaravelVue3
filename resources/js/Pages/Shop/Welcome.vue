@@ -1,6 +1,17 @@
 
 <template>
-    <div>
+    <div class="welcome">
+
+        <div class="box-1">
+            <div class="title-1">заголовок 1</div>
+        </div>
+
+        <div class="box">
+            <div class="title">заголовок</div>
+        </div>
+
+        <InputText type="text" class="custom-input" v-model="value" placeholder="Введите текст"/>
+        <div>{{value}}</div>
 
         <div class="custom-dropdown">
             <Dropdown v-model="selectedCountry" :options="countries" placeholder="Select a City"
@@ -35,17 +46,20 @@
 <script>
 
     import Dropdown from 'primevue/dropdown';
+    import InputText from 'primevue/inputtext';
 
 
     export default {
 
         components: {
-            Dropdown
+            Dropdown,
+            InputText
         },
+
 
         data() {
             return {
-
+                value: null,
                 selectedCountry: null,
                 countries: [
                     {name: 'Australia', code: 'AU'},
@@ -67,6 +81,32 @@
 </script>
 
 <style lang="scss" scoped>
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background: var(--background-box);
+
+        .title {
+            color: var(--color-title);
+        }
+    }
+
+    .box-1 {
+        width: 200px;
+        height: 200px;
+        background: var(--primary-color);
+
+        .title-1 {
+            color: var(--primary-color-text);
+        }
+    }
+
+    :deep(.custom-input) {
+
+        background-color: var(--dron-gon);
+        width: 300px;
+    }
 
     :deep(.custom-dropdown) {
 
